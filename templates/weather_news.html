@@ -31,6 +31,17 @@
         {% endif %}
     </div>
 
+    <div class="result text-center">
+       {% if news %}
+           <h2>Новости:</h2>
+           <ul>
+               {% for article in news %}
+                   <li><a href="{{ article['url'] }}"> {{ article['title'] }} </a></li>
+               {% endfor %}
+           </ul>
+       {% endif %}
+   </div>
+
     <!--Подключение JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
